@@ -1,12 +1,12 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.38.
+signed via the Module::Signature module, version 0.41.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
 
     % cpansign -v
 
-It would check each file's integrity, as well as the signature's
+It will check each file's integrity, as well as the signature's
 validity.  If "==> Signature verified OK! <==" is not displayed,
 the distribution may already have been compromised, and you should
 not run its Makefile.PL or Build.PL.
@@ -14,20 +14,21 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 f3e9f16891e123666ffa05eb5148168b7ebd7332 Changes
-SHA1 492998085140dadede823affd76d8ffc78e77174 MANIFEST
+SHA1 689a8dd0dabbc3f6461b85c91284a69a71ee964d Changes
+SHA1 ced7a219415331128f9ef099195fa553e9c4ab00 MANIFEST
 SHA1 f2706b567c578af20f55579e542d165672cb1988 MANIFEST.SKIP
-SHA1 ce40509a09032e02b2bedcc796e27bea289ca8d4 META.yml
+SHA1 a78005349f97153caa6298840dca6698dc7ec216 META.yml
 SHA1 b9658d16261c77f0158b091361c68522fd681d92 Makefile.PL
-SHA1 3f82cd8aab7dc208c251faa41bb18a951d1be5b9 README
-SHA1 1dd7d889b077606a025f389f10b531f82b13b7cf Symlink.pm
+SHA1 864ae8630f14a878f55ff4a8ffdf3e69080f69b7 README
+SHA1 882cd044870de852287856bc78a5dd686d2d6971 Symlink.pm
 SHA1 3e07cc67859beba9fd19731e271d9abec2b9f71e Symlink.xs
 SHA1 cf613d720ce01e4c37178d89fb36e952a268a4fe pgsymlink.c
 SHA1 c8023964246f90282f0c9ee17e3d54012a3b8dcd t/1-basic.t
+SHA1 7fefab9e3cbe37a7a900a3082ac4d454999bdb5b typemap
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.3 (FreeBSD)
 
-iD8DBQFBTKsZtLPdNzw1AaARAna7AJ96jdUMAkzF1Bx1q0GpMnQBZc+h8QCgtUZK
-oJfkFKlTmz3tLfKpNrXK9g8=
-=TBnX
+iD8DBQFBVK+ptLPdNzw1AaARAkP+AJ0eohsbUWA3hzLUMs5WzyfBdHqSSQCaAzLX
+/ljdn7WeUpwVzmxJ/qhQ7Ac=
+=t0um
 -----END PGP SIGNATURE-----

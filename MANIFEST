@@ -1,11 +1,12 @@
-pgsymlink.c
 Changes
-Symlink.pm
-Symlink.xs
 Makefile.PL
 MANIFEST
 MANIFEST.SKIP
+META.yml			Module meta-data (added by MakeMaker)
+pgsymlink.c
 README
 SIGNATURE
+Symlink.pm
+Symlink.xs
 t/1-basic.t
-META.yml                                 Module meta-data (added by MakeMaker)
+typemap
