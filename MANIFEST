@@ -3,10 +3,11 @@ Makefile.PL
 MANIFEST
 MANIFEST.SKIP
 META.yml			Module meta-data (added by MakeMaker)
-pgsymlink.c
 README
 SIGNATURE
 Symlink.pm
 Symlink.xs
+pgsymlink.c
+tclreadlink.c
 t/1-basic.t
 typemap

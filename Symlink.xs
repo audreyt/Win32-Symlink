@@ -9,6 +9,7 @@ extern "C" {
 #endif
 
 #include "pgsymlink.c"
+#include "tclreadlink.c"
 
 MODULE = Win32::Symlink		PACKAGE = Win32::Symlink		
 
@@ -25,3 +26,12 @@ symlink(oldpath, newpath)
 	}
     OUTPUT:
         RETVAL
+
+char *
+readlink(path)
+    SV * path
+    CODE:
+	RETVAL = tclreadlink(SvPV_nolen(path));
+    OUTPUT:
+        RETVAL
+

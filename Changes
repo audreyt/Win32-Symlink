@@ -1,29 +1,17 @@
-----------------------------------------------------------------------
-r8170:  autrijus | 2004-09-24T23:36:28.339129Z
+[Changes for 0.03 - 2004-09-24]
 
-* This be 0.03.
-----------------------------------------------------------------------
-r8169:  autrijus | 2004-09-24T23:35:37.686591Z
+* readlink() support, adapted from Tcl's source code.
+* Add proper copyright notices for both pgsymlink.c and tclreadlink.c.
+
+[Changes for 0.03 - 2004-09-24]
 
 * Fix building on Perl 5.6.1 by providing a correct typemap.
-----------------------------------------------------------------------
-r7681:   | 2004-09-18T21:38:28.263331Z
+* Fix the installation procedure mentioned in README.
 
-* fix README's isntallation procedure
-----------------------------------------------------------------------
-r7678:   | 2004-09-18T21:35:26.311697Z
+[Changes for 0.02 - 2004-09-18]
 
-* 0.02, with some docs.
-----------------------------------------------------------------------
-r7677:   | 2004-09-18T20:23:40.760619Z
+* Added documentations and tests.
 
-* add a test.
-----------------------------------------------------------------------
-r7676:   | 2004-09-18T20:15:51.075244Z
+[Changes for 0.01 - 2004-09-18]
 
-This be 0.01.
-----------------------------------------------------------------------
-r7674:  autrijus | 2004-09-18T19:41:59.869858Z
-
-* Initial checkin of Win32::Symlink
-----------------------------------------------------------------------
+* Initial release to CPAN.
