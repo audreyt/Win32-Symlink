@@ -7,3 +7,4 @@
 ^blibdirs$
 ^Symlink.(?!pm$|xs$).*$
 ^pgsymlink.(?!c$).*$
+^.*.pdb$

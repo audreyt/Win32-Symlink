@@ -5,11 +5,10 @@ symbolic links on windows.
 
 Win32::Symlink uses the standard perl module install process:
 
-cpansign -v		# see SIGNATURE for details
 perl Makefile.PL
-make
-make test
-make install
+nmake
+nmake test
+nmake install
 
 * Copyright
 

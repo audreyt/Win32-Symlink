@@ -5,9 +5,13 @@ use vars qw($VERSION @ISA);
 use DynaLoader;
 
 @ISA = qw(DynaLoader);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 __PACKAGE__->bootstrap($VERSION);
+
+sub import {
+    *CORE::GLOBAL::symlink = __PACKAGE__->can('symlink');
+}
 
 1;
 
@@ -19,7 +23,7 @@ Win32::Symlink - Symlink support on Windows
 
 =head1 VERSION
 
-This document describes version 0.01 of Win32::Symlink, released
+This document describes version 0.02 of Win32::Symlink, released
 September 19, 2004.
 
 =head1 SYNOPSIS
@@ -29,7 +33,12 @@ September 19, 2004.
 
 =head1 DESCRIPTION
 
-=head1 NOTES
+This module implements the built-in C<symlink> function for Microsoft Windows.
+Currently, it only works for NTFS filesystems.
+
+=head1 SEE ALSO
+
+L<Win32::Hardlink>
 
 =head1 AUTHORS
 
