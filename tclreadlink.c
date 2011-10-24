@@ -106,12 +106,12 @@ typedef struct {
     WORD           ReparseTargetMaximumLength;
     WORD           Dummy1;
     WCHAR          ReparseTarget[MAX_PATH*3];
-} REPARSE_DATA_BUFFER;
+} WIN32_SYMLINK_REPARSE_DATA_BUFFER;
 
 static int 
 NativeReadReparse(LinkDirectory, buffer)
     CONST TCHAR* LinkDirectory;   /* The junction to read */
-    REPARSE_DATA_BUFFER* buffer;  /* Pointer to buffer. Cannot be NULL */
+    WIN32_SYMLINK_REPARSE_DATA_BUFFER* buffer;  /* Pointer to buffer. Cannot be NULL */
 {
     HANDLE hFile;
     int returnedLength;
@@ -127,7 +127,7 @@ NativeReadReparse(LinkDirectory, buffer)
     /* Get the link */
     if (!DeviceIoControl(hFile, FSCTL_GET_REPARSE_POINT, NULL, 
 			 0, buffer,
-			 sizeof(REPARSE_DATA_BUFFER), &returnedLength, NULL)) {	
+			 sizeof(WIN32_SYMLINK_REPARSE_DATA_BUFFER), &returnedLength, NULL)) {	
 	/* Error setting junction */
 	/* TclWinConvertError(GetLastError()); */
 	CloseHandle(hFile);
@@ -147,7 +147,7 @@ tclreadlink(LinkDirectory)
     CONST TCHAR* LinkDirectory;
 {
     int attr;
-    REPARSE_DATA_BUFFER reparseBuffer;
+    WIN32_SYMLINK_REPARSE_DATA_BUFFER reparseBuffer;
     
     attr = GetFileAttributes(LinkDirectory);
     if (!(attr & FILE_ATTRIBUTE_REPARSE_POINT)) {
