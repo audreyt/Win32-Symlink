@@ -25,8 +25,8 @@ Win32::Symlink - Symlink support on Windows
 
 =head1 VERSION
 
-This document describes version 0.05 of Win32::Symlink, released
-October 24, 2011.
+This document describes version 0.06 of Win32::Symlink, released
+April 13, 2015.
 
 =head1 SYNOPSIS
 

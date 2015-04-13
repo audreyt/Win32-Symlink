@@ -1,3 +1,7 @@
+[Changes for 0.06 - 2015-04-13]
+
+* Fix Perl 5.20.2 compatibility. (Oliver Tuschhoff)
+
 [Changes for 0.05 - 2010-10-24]
 
 * LICENSING CHANGE: This module is now in the public domain under

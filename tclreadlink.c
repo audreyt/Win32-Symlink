@@ -93,9 +93,15 @@ of the Rights in Technical Data and Computer Software Clause as DFARS
 #define IO_REPARSE_TAG_SYMBOLIC_LINK IO_REPARSE_TAG_RESERVED_ZERO
 #endif
 #define FILE_SPECIAL_ACCESS         (FILE_ANY_ACCESS)
+#ifndef FSCTL_SET_REPARSE_POINT
 #define FSCTL_SET_REPARSE_POINT     CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 41, METHOD_BUFFERED, FILE_SPECIAL_ACCESS) 
+#endif
+#ifndef FSCTL_GET_REPARSE_POINT
 #define FSCTL_GET_REPARSE_POINT     CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 42, METHOD_BUFFERED, FILE_ANY_ACCESS) 
+#endif
+#ifndef FSCTL_DELETE_REPARSE_POINT
 #define FSCTL_DELETE_REPARSE_POINT  CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 43, METHOD_BUFFERED, FILE_SPECIAL_ACCESS) 
+#endif
 
 #define REPARSE_MOUNTPOINT_HEADER_SIZE   8
 typedef struct {
@@ -114,7 +120,7 @@ NativeReadReparse(LinkDirectory, buffer)
     WIN32_SYMLINK_REPARSE_DATA_BUFFER* buffer;  /* Pointer to buffer. Cannot be NULL */
 {
     HANDLE hFile;
-    int returnedLength;
+    DWORD returnedLength;
    
     hFile = CreateFile(LinkDirectory, GENERIC_READ, 0,
 	NULL, OPEN_EXISTING, 
