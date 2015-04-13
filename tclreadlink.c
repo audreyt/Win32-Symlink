@@ -142,6 +142,11 @@ NativeReadReparse(LinkDirectory, buffer)
     return 0;
 }
 
+#define WIN32_SYMLINK_W2AHELPER_LEN(lpw, wlen, lpa, nChars)\
+        (lpa[0] = '\0', WideCharToMultiByte((IN_BYTES) ? CP_ACP : CP_UTF8, 0, \
+                                                                   lpw, wlen, (LPSTR)lpa, nChars,NULL,NULL))
+#define WIN32_SYMLINK_W2AHELPER(lpw, lpa, nChars) WIN32_SYMLINK_W2AHELPER_LEN(lpw, -1, lpa, nChars)
+
 char *
 tclreadlink(LinkDirectory)
     CONST TCHAR* LinkDirectory;
@@ -167,10 +172,10 @@ tclreadlink(LinkDirectory)
 	    if (len < 4) return NULL;
 
 	    New('r', retval, len + sizeof(WCHAR), char);
-	    W2AHELPER(
+	    WIN32_SYMLINK_W2AHELPER(
 		reparseBuffer.ReparseTarget,
 		retval,
-		len,
+		len
 	    );
 	    retval += 4;
 	    return retval;

@@ -1,11 +1,12 @@
 package Win32::Symlink;
 
 use strict;
+use 5.005;
 use vars qw($VERSION @ISA);
 use DynaLoader;
 
 @ISA = qw(DynaLoader);
-$VERSION = '0.04';
+$VERSION = '0.06';
 
 __PACKAGE__->bootstrap($VERSION);
 
@@ -24,8 +25,8 @@ Win32::Symlink - Symlink support on Windows
 
 =head1 VERSION
 
-This document describes version 0.04 of Win32::Symlink, released
-October 10, 2004.
+This document describes version 0.05 of Win32::Symlink, released
+October 24, 2011.
 
 =head1 SYNOPSIS
 
@@ -48,15 +49,15 @@ L<Win32::Hardlink>
 
 =head1 AUTHORS
 
-Autrijus Tang E<lt>autrijus@autrijus.orgE<gt>
+Audrey Tang E<lt>cpan@audreyt.orgE<gt>
 
-=head1 COPYRIGHT
+=head1 CC0 1.0 Universal
 
-Copyright 2004 by Autrijus Tang E<lt>autrijus@autrijus.orgE<gt>.
+To the extent possible under law, 唐鳳 has waived all copyright and related
+or neighboring rights to Win32-Symlink.
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+This work is published from Taiwan.
 
-See L<http://www.perl.com/perl/misc/Artistic.html>
+L<http://creativecommons.org/publicdomain/zero/1.0>
 
 =cut

@@ -1,4 +1,19 @@
-[Changes for 0.03 - 2004-09-24]
+[Changes for 0.05 - 2010-10-24]
+
+* LICENSING CHANGE: This module is now in the public domain under
+  CC0 1.0 Universal terms. However, these two individual files
+  are still under the BSD license by their respective authors:
+
+      pgsymlink.c
+      tclreadlink.c
+
+* Fix Perl 5.8.4+VC6 compilation. (asavige++)
+
+* Fix Strawberry Perl compilation.
+
+* Upgrade to new Module::Package build facility.
+
+[Changes for 0.04 - 2004-10-10]
 
 * readlink() support, adapted from Tcl's source code.
 * Add proper copyright notices for both pgsymlink.c and tclreadlink.c.
